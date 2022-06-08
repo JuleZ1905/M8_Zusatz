@@ -1,0 +1,17 @@
+{
+    "name": "julian/aufgabe",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Julian\\Aufgabe\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "julian"
+        }
+    ],
+    "require": {
+        "typo3fluid/fluid": "^2.7"
+    }
+}

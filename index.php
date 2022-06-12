@@ -1,14 +1,25 @@
 <?php
 
+use Julian\Aufgabe\Message;
 use TYPO3Fluid\Fluid\View\TemplateView;
 
-require('vendor/autoload.php');
+require_once('vendor/autoload.php');
 
 $view = new TemplateView();
 
 $paths = $view->getTemplatePaths();
 $paths->setTemplatePathAndFilename('templates/main.html');
 
-echo $view->render();
+$view->assignMultiple([
+    'message' => Message::getRandomMessage()->getMessage(),
+]);
+
+if (isset($_POST['action']) && $_POST['action'] == 'new') {
+    echo Message::getRandomMessage()->getMessage();
+} else {
+    echo $view->render();
+}
+
+
 
 ?>

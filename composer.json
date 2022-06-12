@@ -12,6 +12,7 @@
         }
     ],
     "require": {
-        "typo3fluid/fluid": "^2.7"
+        "typo3fluid/fluid": "^2.7",
+        "doctrine/dbal": "^3.3"
     }
 }

@@ -1,3 +1,89 @@
+* {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: orange;
+  overflow-y: hidden;
+}
+
 .header {
     text-align: center;
+    margin:0;
+    padding-top: 2%;
+    font-size: 3em;
+}
+
+.all {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.random-box {
+    width: 60%;
+    height: 40%;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 20px 10px 20px rgba(75, 75, 75, 0.5);
+    transition: all .8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    margin-top: 1em;
+    width: 80%;
+    height: 20%;
+}
+
+.message {
+    width: 80%;
+    height: 60%;
+}
+
+.button {
+    width: 80%;
+    height: 20%;
+}
+
+button {
+    width: fit-content;
+    height: fit-content;
+    border: orange solid 3px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 0.4em;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    transition: .5s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .random-box {
+        width: 90%;
+        height: 50%;
+    }
 }

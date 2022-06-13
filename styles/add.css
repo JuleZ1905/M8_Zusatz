@@ -27,7 +27,7 @@ body {
     height: 100%;
 }
 
-.random-box {
+.add-box {
     width: 60%;
     height: 40%;
     background-color: white;
@@ -76,6 +76,23 @@ button {
     transition: .5s ease-in-out;
 }
 
+.text-input {
+    border: orange solid 3px;
+    border-radius: 10px;
+    height: 25%;
+    width: 80%;
+    font-size: 1.5em;
+}
+
+#error-text {
+    color: red;
+    font-size: 1em;
+}
+
+.text-input:focus {
+    outline: none;
+}
+
 button:hover {
     transform: scale(1.1);
     background-color: rgb(226, 226, 226);
@@ -83,12 +100,16 @@ button:hover {
 }
 
 @media screen and (max-width: 800px) {
-    .random-box {
+    .add-box {
         width: 90%;
         height: 50%;
     }
 
-    button {
-        font-size: 1.15em;
+    .text-input {
+        width: 100%;
+    }
+
+    #error-text {
+        font-size: 1.1em;
     }
 }

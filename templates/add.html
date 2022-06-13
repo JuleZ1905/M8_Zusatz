@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookie</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../styles/add.css">
+<body>
+    <h1 class="header">Fortune Cookie Generator</h1>
+    <div class="all">
+        <form class="add-box" action="add.php" method="POST">
+            <div class="inside info">
+                <p>Write your own fortune cookie message down below and press the button to save it</p>
+            </div>
+            <div class="inside message">
+                <input class="text-input" type="text" name="new-message" required>
+            </div>
+            <div class="inside button">
+                <button type="button" id="back-button" onclick="window.location.href='/index.php'">Back</button>
+                <button type="submit" id="add-button" name="submit" value="submit">Save & submit</button>
+            </div>
+            <f:if condition="{error}">
+                <div class="error inside">
+                    <p id="error-text">{error}</p>
+                </div>
+            </f:if>
+        </form>
+    </div>
+</body>
+</html>
